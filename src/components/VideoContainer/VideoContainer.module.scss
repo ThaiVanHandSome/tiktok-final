@@ -1,0 +1,98 @@
+.wrapper {
+    position: relative;
+    max-width: 600px;
+    max-height: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(22, 24, 35, 0.2);
+}
+
+.container {
+    display: flex;
+}
+
+.avatar {
+    --size: 56px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.post-info {
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-text {
+    flex: 1;
+}
+
+
+.btn-follow {
+    display: inline-block; 
+    margin-top: 8px;   
+}
+
+
+.video {
+    width: 326px;
+    height: calc(450px + ((100vw - 768px) / 1152) * 200);
+    border-radius: 12px;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    letter-spacing: -0.028px;
+    margin-right: 4px;
+}
+
+.user-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    letter-spacing: 0.093px;
+}
+
+.caption {
+    font-size: 1.6rem;
+    width: 100%;
+
+    .tag {
+        display: inline-block;
+        font-weight: 600;
+        color: rgb(43, 93, 185);
+        margin-right: 4px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.text {
+    width: 100%;
+    line-height: 2.1rem;
+    color: #161823;
+    letter-spacing: 0.03px;
+}
+
+.music {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.icon {
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.music-name {
+    &:hover {
+        text-decoration: underline;
+    }
+}

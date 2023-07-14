@@ -1,0 +1,43 @@
+.wrapper {
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    padding: 8px;
+    padding-left: 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &.active {
+        color: var(--primary);
+
+        .icon-active {
+            display: flex;
+        }
+
+        .icon {
+            display: none;
+        }
+    }
+}
+
+.icon,
+.icon-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-active {
+    display: none;
+}
+
+.title {
+    font-size: 1.8rem;
+    margin-left: 6px;
+}

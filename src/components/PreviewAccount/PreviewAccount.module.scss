@@ -1,0 +1,50 @@
+.wrapper {
+    padding: 8px 12px;
+    width: var(--default-layout-sidebar-width);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    --size: 60px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+
+.info {
+    margin-top: 12px;
+}
+
+.name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #161823;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #161823bf;
+}
+
+.count {
+    margin-top: 6px;
+    font-size: 1.8rem;
+}
+
+.value {
+    color: var(--black);
+}
+
+.type {
+    font-size: 1.6rem;
+}
+
+.type + .value {
+    margin-left: 8px;
+}

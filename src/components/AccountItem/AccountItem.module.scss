@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.avatar {
+    --size: 46px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.1px;
+    color: rgba(22, 24, 35, 1);
+}
+
+.icon {
+    margin-left: 4px;
+    font-size: 1.6rem;
+    color: rgb(32, 213, 236);
+}
+
+.account {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: rgba(22, 24, 35, 0.6);
+}

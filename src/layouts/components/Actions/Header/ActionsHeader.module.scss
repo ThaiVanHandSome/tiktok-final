@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.contain-menu,
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.contain-menu {
+    margin-left: 12px;
+    padding: 12px;
+    font-size: 2.2rem;
+}
+
+.icon {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+.avatar {
+    --size: 32px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
