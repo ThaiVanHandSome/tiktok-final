@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 const cx = classNames.bind(styles);
 
 function Upload() {
-    const [video, setVideo] = useState(null);
+    const [video, setVideo] = useState(true);
     const inpFileRef = useRef();
 
     const handleOpenFolder = () => {

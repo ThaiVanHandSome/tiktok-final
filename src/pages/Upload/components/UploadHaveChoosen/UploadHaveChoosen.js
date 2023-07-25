@@ -8,13 +8,17 @@ import { CutIcon, SubIcon, PlusIcon } from '../../IconUpload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowsSplitUpAndLeft } from '@fortawesome/free-solid-svg-icons';
 import { video1 } from '~/asset/videos';
+import FormCaption from './components/FormCaption';
+import WhoCanWatch from './components/WhoCanWatch';
 
 const cx = classNames.bind(styles);
-const myVideo = document.createElement('video');
 
 function UploadHaveChoosen({ urlVideo }) {
     const [disableSplit, setDisableSplit] = useState(true);
+    const [captionValue, setCaptionValue] = useState('');
+
     const canvasRef = useRef();
+    const myVideo = document.createElement('video');
     let isPlaying = false;
 
     useEffect(() => {
@@ -61,7 +65,7 @@ function UploadHaveChoosen({ urlVideo }) {
                             <p className={cx('number')}>1</p>
                             <Image src="" alt="video" className={cx('video-image')} />
                             <div className={cx('info-video')}>
-                                <p className={cx('caption')}>Hello xin chao cac ban</p>
+                                <p className={cx('caption')}>{captionValue}</p>
                                 <div className={cx('video-length')}>
                                     <span className={cx('time')}>00:00 - 00:26</span>
                                     <span className={cx('duration')}>26s</span>
@@ -132,6 +136,10 @@ function UploadHaveChoosen({ urlVideo }) {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className={cx('form')}>
+                            <FormCaption captionValue={captionValue} setCaptionValue={setCaptionValue} />
+                            <WhoCanWatch />
                         </div>
                     </div>
                 </div>
