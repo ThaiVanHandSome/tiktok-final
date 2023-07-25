@@ -24,7 +24,7 @@ const publicRoutes = [
     {
         path: routes.upload,
         component: Upload,
-        layout: null,
+        layout: HeaderOnly,
     },
 ];
 

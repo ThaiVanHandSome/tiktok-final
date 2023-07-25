@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lấy ảnh từ video bằng JavaScript</title>
+</head>
+
+<body>
+    <video id="video" width="640" height="480" controls>
+        <source src="./src/asset/videos/video_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button onclick="captureImage()">Lấy ảnh từ video</button>
+    <img id="capturedImage" src="" style="display: none;">
+    <script>
+        const video = document.getElementById('video');
+        const capturedImage = document.getElementById('capturedImage');
+
+        function captureImage() {
+            // Tạo một canvas để vẽ hình ảnh từ video lên đó
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const context = canvas.getContext('2d');
+
+            // Vẽ khung hình hiện tại từ video lên canvas
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Chuyển dữ liệu hình ảnh từ canvas sang ảnh và hiển thị nó
+            capturedImage.src = canvas.toDataURL();
+            console.log(canvas.toDataURL());
+            capturedImage.style.display = 'inline';
+        }
+    </script>
+</body>
+
+</html>

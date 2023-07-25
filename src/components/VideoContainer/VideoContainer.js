@@ -5,6 +5,7 @@ import Image from '~/components/Image';
 import Button from '../Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import Video from './components/Video';
 
 const cx = classNames.bind(styles);
 
@@ -39,9 +40,7 @@ function VideoContainer({ DATA }) {
                             Follow
                         </Button>
                     </div>
-                    <video className={cx('video')} controls>
-                        <source src={DATA.video} type="video/mp4" />
-                    </video>
+                    <Video className={cx('video')} data={DATA} />
                 </div>
             </div>
         </div>

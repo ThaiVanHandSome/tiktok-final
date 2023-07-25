@@ -5,7 +5,7 @@ import images from '~/asset/images';
 
 const cx = classNames.bind(styles);
 
-function Image({ src, tempImage: avatar = images.defaultAvatar, alt, className }) {
+function Image({ ref, src, tempImage: avatar = images.defaultAvatar, alt, className }) {
     const classes = cx('wrapper', {
         [className]: className,
     });
@@ -17,7 +17,7 @@ function Image({ src, tempImage: avatar = images.defaultAvatar, alt, className }
     if (!_avatar) {
         handleError();
     }
-    return <img src={_avatar} alt={alt} className={classes} onError={handleError} />;
+    return <img ref={ref} src={_avatar} alt={alt} className={classes} onError={handleError} />;
 }
 
 export default Image;

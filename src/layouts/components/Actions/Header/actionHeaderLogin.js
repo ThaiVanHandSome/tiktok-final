@@ -10,13 +10,14 @@ import Button from '~/components/Button';
 import HeadlessTippy from './HeadlessTippy';
 import { MessageIcon, InboxIcon } from '~/Icons';
 import Image from '~/components/Image';
+import { routes } from '~/config';
 
 const cx = classNames.bind(styles);
 
 function ActionHeaderLogin({ MENU_ITEMS = [] }) {
     return (
         <div className={cx('wrapper')}>
-            <Button normal iconLeft={<FontAwesomeIcon icon={faPlus} />}>
+            <Button to={routes.upload} normal iconLeft={<FontAwesomeIcon icon={faPlus} />}>
                 Upload
             </Button>
             <Tippy content="Message">

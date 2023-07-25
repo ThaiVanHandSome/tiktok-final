@@ -1,6 +1,16 @@
+import classNames from 'classnames/bind';
+import styles from './Following.module.scss';
+import DefaultFollowing from './DefaultFollowing';
+import HaveFollowing from './HaveFollowing';
+
+const cx = classNames.bind(styles);
+
 function Following() {
     return (
-        <h1>Following</h1>
+        <div className={cx('wrapper')}>
+            {/* <DefaultFollowing /> */}
+            <HaveFollowing />
+        </div>
     );
 }
 
