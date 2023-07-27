@@ -1,0 +1,38 @@
+.wrapper {
+    margin-top: 12px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    color: rgba(22, 24, 35, 1);
+}
+
+.warning-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+}
+
+.label-warning {
+    width: 240px;
+    padding: 12px;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.value-day-hour {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
