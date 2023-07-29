@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Fragment, useContext } from 'react';
 import DefaultLayout from '~/layouts/DefaultLayout/DefaultLayout';
 import { publicRoutes } from './routes';
-import { authContext } from './Context/authContext';
-import Auth from './components/Auth';
+import { boxContext } from './Context/boxContext';
+import { Notification } from './Popper';
 
 function App() {
-    const [openAuth, setOpenAuth] = useContext(authContext);
+    const [box, setBox] = useContext(boxContext);
     return (
         <div>
             <Router>
@@ -25,7 +25,7 @@ function App() {
                     </Routes>
                 </div>
             </Router>
-            {openAuth && <Auth />}
+            {!!box.comp && <Notification>{box.comp}</Notification>}
         </div>
     );
 }

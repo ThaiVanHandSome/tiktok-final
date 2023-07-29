@@ -1,0 +1,40 @@
+.wrapper {
+    position: relative;
+    margin-right: 10px;
+    --size: 16px;
+    width: var(--size);
+    height: var(--size);
+}
+
+.checkbox-inp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    cursor: pointer;
+
+    &:hover ~ .checkbox-icon {
+        border: 1.5px solid rgb(234, 40, 78);
+    }
+
+    &:checked ~ .checkbox-icon {
+        background-color: rgba(254, 44, 85, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.checkbox-icon {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1.5px solid rgba(22, 24, 35, 0.12);
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}

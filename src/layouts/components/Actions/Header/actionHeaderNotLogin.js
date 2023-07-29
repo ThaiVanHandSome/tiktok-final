@@ -8,13 +8,18 @@ import { faPlus, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
 import HeadlessTippy from './HeadlessTippy';
 import { authContext } from '~/Context/authContext';
+import { boxContext } from '~/Context/boxContext';
+import Auth from '~/components/Auth';
 
 const cx = classNames.bind(styles);
 
 function ActionHeaderNotLogin({ MENU_ITEMS = [] }) {
-    var [openAuth, setOpenAuth] = useContext(authContext);
+    var [box, setBox] = useContext(boxContext);
     const handleLogin = () => {
-        setOpenAuth(true);
+        // setOpenAuth(true);
+        setBox({
+            comp: <Auth />,
+        });
     };
     return (
         <div className={cx('wrapper')}>

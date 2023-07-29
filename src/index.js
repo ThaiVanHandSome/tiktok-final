@@ -5,17 +5,19 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyle from '~/components/GlobalStyle';
 import LoginProvider from './Context/loginContext';
 import AuthProvider from './Context/authContext';
+import LearnMoreProvider from './Context/learnMoreContext';
+import BoxProvider from './Context/boxContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <AuthProvider>
+        <BoxProvider>
             <LoginProvider>
                 <GlobalStyle>
                     <App />
                 </GlobalStyle>
             </LoginProvider>
-        </AuthProvider>
+        </BoxProvider>
     </React.StrictMode>,
 );
 

@@ -1,0 +1,31 @@
+.wrapper {
+    width: 764px;
+    max-width: calc(100vw - 32px);
+    padding-top: 24px;
+}
+
+.heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding: 0px 24px;
+}
+
+.content {
+    padding: 24px;
+    border-top: 0.5px solid rgba(22, 24, 35, 0.2);
+    border-bottom: 0.5px solid rgba(22, 24, 35, 0.2);
+}
+
+.text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.footer {
+    padding: 22px;
+    display: flex;
+    flex-direction: row-reverse;
+}

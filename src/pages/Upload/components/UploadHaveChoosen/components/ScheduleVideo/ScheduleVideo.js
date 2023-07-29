@@ -5,14 +5,12 @@ import styles from './ScheduleVideo.module.scss';
 import { WarningIcon } from '~/pages/Upload/IconUpload';
 import { Wrapper as PopperWrapper } from '~/Popper';
 import Switch from '~/components/Switch';
-import Calendar from '~/components/Calendar';
 import ChooseDay from './components/ChooseDay';
 import ChooseHour from './components/ChooseHour';
 
 const cx = classNames.bind(styles);
 
-function ScheduleVideo() {
-    const [showSchedule, setShowSchedule] = useState(false);
+function ScheduleVideo({ haveSchedule, setHaveSchedule }) {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('content')}>
@@ -36,9 +34,9 @@ function ScheduleVideo() {
                         <WarningIcon />
                     </div>
                 </Tippy>
-                <Switch state={showSchedule} setState={setShowSchedule} />
+                <Switch state={haveSchedule} setState={setHaveSchedule} />
             </div>
-            {showSchedule && (
+            {haveSchedule && (
                 <div className={cx('value-day-hour')}>
                     <ChooseDay />
                     <ChooseHour />

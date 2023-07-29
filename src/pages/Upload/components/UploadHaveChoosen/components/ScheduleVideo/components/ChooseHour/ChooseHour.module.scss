@@ -1,5 +1,5 @@
 .value-container {
-    display: block;
+    display: flex;
     min-width: 75px;
     height: 32px;
     background: rgba(46, 50, 56, 0.05);
@@ -14,3 +14,16 @@
     border: 1px solid transparent;
     cursor: pointer;
 }
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-item {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+

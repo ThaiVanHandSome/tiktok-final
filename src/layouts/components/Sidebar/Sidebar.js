@@ -19,13 +19,14 @@ import {
 import { routes } from '~/config';
 import Button from '~/components/Button';
 import { loginContext } from '~/Context/loginContext';
-import { authContext } from '~/Context/authContext';
+import { boxContext } from '~/Context/boxContext';
+import Auth from '~/components/Auth';
 
 const cx = classNames.bind(styles);
 
 function Sidebar() {
     var [isLogin, setLogin] = useContext(loginContext);
-    var [openAuth, setOpenAuth] = useContext(authContext);
+    var [box, setBox] = useContext(boxContext);
     return (
         <div className={cx('wrapper')}>
             <Menu>
@@ -96,7 +97,15 @@ function Sidebar() {
                 <div className={cx('container')}>
                     <div className={cx('container-btn')}>
                         <p className={cx('content')}>Log in to follow creators, like videos, and view comments.</p>
-                        <Button outline className={cx('btn-log-in')} onClick={() => setOpenAuth(true)}>
+                        <Button
+                            outline
+                            className={cx('btn-log-in')}
+                            onClick={() =>
+                                setBox({
+                                    comp: <Auth />,
+                                })
+                            }
+                        >
                             Login
                         </Button>
                     </div>

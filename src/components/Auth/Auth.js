@@ -4,7 +4,6 @@ import styles from './Auth.module.scss';
 
 import Container from './Container';
 import { DATA_LOGIN, DATA_SIGNUP } from './data';
-import { Wrapper as PopperWrapper } from '~/Popper';
 
 const cx = classNames.bind(styles);
 
@@ -17,9 +16,7 @@ function Auth() {
     };
     return (
         <div className={cx('wrapper')}>
-            <PopperWrapper className={cx('popper-wrapper')}>
-                <Container DATA={DATA} handleChange={handleChange} login={login}/>
-            </PopperWrapper>
+            <Container DATA={DATA} handleChange={handleChange} login={login} />
         </div>
     );
 }

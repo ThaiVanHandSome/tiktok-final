@@ -247,3 +247,16 @@
     justify-content: center;
     pointer-events: none;
 }
+
+// Footer
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.btn-footer {
+    width: 164px;
+    height: 48px;
+}

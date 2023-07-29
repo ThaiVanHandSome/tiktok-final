@@ -4,11 +4,12 @@ import classNames from 'classnames/bind';
 import styles from './Auth.module.scss';
 import { CloseIcon, ArrowBottomIcon } from '~/Icons';
 import { authContext } from '~/Context/authContext';
+import { boxContext } from '~/Context/boxContext';
 
 const cx = classNames.bind(styles);
 
 function Container({ DATA, handleChange, login }) {
-    var [openAuth, setOpenAuth] = useContext(authContext);
+    var [box, setBox] = useContext(boxContext);
     const [openMenu, setOpenMenu] = useState(login);
 
     useEffect(() => {
@@ -20,7 +21,14 @@ function Container({ DATA, handleChange, login }) {
     };
     return (
         <div className={cx('container')}>
-            <button className={cx('close')} onClick={() => setOpenAuth(false)}>
+            <button
+                className={cx('close')}
+                onClick={() =>
+                    setBox({
+                        comp: null,
+                    })
+                }
+            >
                 <CloseIcon />
             </button>
             <h1 className={cx('heading')}>{DATA.heading}</h1>
